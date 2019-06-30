@@ -189,6 +189,7 @@ class Game(FloatLayout):
     def singleGame(self):
         p1 = Player(self)
         ai = Player(self)
+        scoreboard = ScoreBoard()
         self.lbutton.bind(on_press = p1.p1hitl)
         self.rbutton.bind(on_press = p1.p1hitr)
         Clock.schedule_interval(ai.aihit, 1.0/60.0)
@@ -197,6 +198,12 @@ class Game(FloatLayout):
     def mirrorGame(self):
         self.lbutton.pos_hint = { 'x' : .6, 'y' : .05 }
         self.rbutton.pos_hint = { 'x' : .2, 'y' : .05 }
+        p1 = Player(self)
+        ai = Player(self)
+        self.lbutton.bind(on_press = p1.p1hitl)
+        self.rbutton.bind(on_press = p1.p1hitr)
+        Clock.schedule_interval(ai.aihit, 1.0/60.0)
+        Clock.schedule_interval(self.update, 1.0/60.0)
 
     def infinityGame(self):
         pass
