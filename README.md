@@ -10,4 +10,4 @@ A simple ping pong game deployed by Kivy
 
 ## Demo
 
-<img height=400 width=240 src="https://raw.githubusercontent.com/NewHanly/KivyPingPong/master/demo/demo.gif">
+<img height=400 width=240 src="https://raw.githubusercontent.com/NewHanly/KivyPingPong/master/demo/demo.gif"/>
